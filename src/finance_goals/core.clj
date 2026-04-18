@@ -1,16 +1,28 @@
 (ns finance-goals.core
   (:gen-class)
   (:require [finance-goals.adapters.inbound.http.routes :as http-routes]
-            [finance-goals.adapters.outbound.random-macro-goal-generator :as random-macro-goal-generator]
+            [finance-goals.adapters.outbound.postgres-macro-goal-generator :as postgres-macro-goal-generator]
+            [next.jdbc :as jdbc]
             [ring.adapter.jetty :refer [run-jetty]]
             [ring.middleware.json :refer [wrap-json-response]]))
+
+(def db
+  {:dbtype "postgresql"
+   :dbname "finance"
+   :host "localhost"
+   :port 5432
+   :user "usuario"
+   :password "1234"})
+
+(def datasource
+  (jdbc/get-datasource db))
 
 (defn build-app [generator]
   (-> (http-routes/build-routes generator)
       (wrap-json-response)))
 
 (def app
-  (build-app (random-macro-goal-generator/new-generator)))
+  (build-app (postgres-macro-goal-generator/new-generator datasource)))
 
 (defn -main
   "Starts the API server"

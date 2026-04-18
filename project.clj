@@ -6,8 +6,11 @@
   :dependencies [[org.clojure/clojure "1.11.1"]
                  [cheshire "5.12.0"]
                  [ring "1.9.6"]
+                 [ring/ring-jetty-adapter "1.9.6"]
                  [compojure "1.7.0"]
-                 [ring/ring-json "0.5.1"]]
+                 [ring/ring-json "0.5.1"]
+                 [com.github.seancorfield/next.jdbc "1.3.939"]
+                 [org.postgresql/postgresql "42.7.5"]]
   :main ^:skip-aot finance-goals.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all

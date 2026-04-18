@@ -50,6 +50,33 @@ lein run
 
 The API will start on `http://localhost:3000`
 
+### PostgreSQL setup
+
+The app now reads macro goals from PostgreSQL using this config in `src/finance_goals/core.clj`:
+
+```clojure
+(def db
+  {:dbtype "postgresql"
+   :dbname "finance"
+   :host "localhost"
+   :port 5432
+   :user "usuario"
+   :password "1234"})
+```
+
+Create the table before starting the API:
+
+```sql
+CREATE TABLE IF NOT EXISTS macro_goals (
+  id BIGSERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  step INTEGER NOT NULL,
+  current_date_goal TEXT NOT NULL,
+  goal_date TEXT NOT NULL,
+  goal_value INTEGER NOT NULL
+);
+```
+
 ### Running Tests
 
 ```bash

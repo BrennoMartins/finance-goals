@@ -15,7 +15,7 @@
   (macro-goal/make-macro-goal
    {:name (rand-nth macro-goal/goal-names)
     :step (rand-int (inc macro-goal/max-step))
-    :current-date-goal (macro-goal/date-to-string (java.time.LocalDate/now))
+    :current-date (macro-goal/date-to-string (java.time.LocalDate/now))
     :goal-date (random-goal-date)
     :goal-value (random-goal-value)}))
 

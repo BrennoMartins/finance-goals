@@ -15,10 +15,10 @@
   (.toString date))
 
 (defn make-macro-goal
-  [{:keys [name step current-date-goal goal-date goal-value]}]
+  [{:keys [name step current-date goal-date goal-value]}]
   {:name name
    :step step
-   :current-date-goal current-date-goal
+   :current-date current-date
    :goal-date goal-date
    :goal-value goal-value})
 

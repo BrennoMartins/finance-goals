@@ -11,11 +11,11 @@
     (take total goals)))
 
 (def sample-goals
-  [{:name "Goal 1" :step 1 :current-date-goal "2026-04-03" :goal-date "2027-04-03" :goal-value 10000}
-   {:name "Goal 2" :step 2 :current-date-goal "2026-04-03" :goal-date "2027-05-03" :goal-value 20000}
-   {:name "Goal 3" :step 3 :current-date-goal "2026-04-03" :goal-date "2027-06-03" :goal-value 30000}
-   {:name "Goal 4" :step 4 :current-date-goal "2026-04-03" :goal-date "2027-07-03" :goal-value 40000}
-   {:name "Goal 5" :step 5 :current-date-goal "2026-04-03" :goal-date "2027-08-03" :goal-value 50000}])
+  [{:name "Goal 1" :step 1 :current-date "2026-04-03" :goal-date "2027-04-03" :goal-value 10000}
+   {:name "Goal 2" :step 2 :current-date "2026-04-03" :goal-date "2027-05-03" :goal-value 20000}
+   {:name "Goal 3" :step 3 :current-date "2026-04-03" :goal-date "2027-06-03" :goal-value 30000}
+   {:name "Goal 4" :step 4 :current-date "2026-04-03" :goal-date "2027-07-03" :goal-value 40000}
+   {:name "Goal 5" :step 5 :current-date "2026-04-03" :goal-date "2027-08-03" :goal-value 50000}])
 
 (def app
   (wrap-json-response
