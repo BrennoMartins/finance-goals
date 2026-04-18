@@ -25,14 +25,14 @@ Returns a list of 5 random macro goals with mocked data.
     {
       "name": "Save for retirement",
       "step": 5,
-      "current-date": "2026-04-03",
+      "current-date-goal": "2026-04-03",
       "goal-date": "2028-10-15",
       "goal-value": 500000
     },
     {
       "name": "Buy a property",
       "step": 3,
-      "current-date": "2026-04-03",
+      "current-date-goal": "2026-04-03",
       "goal-date": "2027-06-20",
       "goal-value": 300000
     },
@@ -46,7 +46,7 @@ Returns a list of 5 random macro goals with mocked data.
 
 - **name** (string): Name of the financial objective
 - **step** (integer): Current step of the objective (0-9)
-- **current-date** (string): Current date in ISO 8601 format (YYYY-MM-DD)
+- **current-date-goal** (string): Current date in ISO 8601 format (YYYY-MM-DD)
 - **goal-date** (string): Target date to achieve the objective in ISO 8601 format (YYYY-MM-DD)
 - **goal-value** (integer): Target monetary value for the goal
 

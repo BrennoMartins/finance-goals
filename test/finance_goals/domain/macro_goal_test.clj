@@ -11,12 +11,12 @@
   (testing "It returns a macro goal map with the expected fields"
     (let [goal (macro-goal/make-macro-goal {:name "Save for retirement"
                                             :step 4
-                                            :current-date "2026-04-03"
+                                            :current-date-goal "2026-04-03"
                                             :goal-date "2028-04-03"
                                             :goal-value 250000})]
       (is (= {:name "Save for retirement"
               :step 4
-              :current-date "2026-04-03"
+              :current-date-goal "2026-04-03"
               :goal-date "2028-04-03"
               :goal-value 250000}
              goal)))))

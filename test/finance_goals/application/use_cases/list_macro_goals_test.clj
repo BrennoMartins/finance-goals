@@ -13,7 +13,7 @@
     (let [goals (for [n (range 1 8)]
                   {:name (str "Goal " n)
                    :step n
-                   :current-date "2026-04-03"
+                   :current-date-goal "2026-04-03"
                    :goal-date "2027-04-03"
                    :goal-value (* n 1000)})
           generator (->StubMacroGoalGenerator goals)]
