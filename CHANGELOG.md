@@ -13,7 +13,7 @@ All notable changes to this project will be documented in this file. This change
 - REST API endpoint for retrieving macro goals
 - JSON response formatting with count and data fields
 - Mock data generation for financial objectives
-- Goal fields: name, step, current-date, goal-date, goal-value
+- Goal fields: name, step, current-date-goal, goal-date, goal-value
 
 ### Changed
 - Documentation in English
