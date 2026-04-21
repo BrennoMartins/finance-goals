@@ -1,5 +1,5 @@
 (ns finance-goals.diplomatic.http-server
-  (:require [compojure.core :refer [GET POST PUT defroutes]]
+  (:require [compojure.core :refer [GET defroutes]]
             [compojure.route :as route]
             [ring.adapter.jetty :as jetty]
             [ring.middleware.defaults :refer [api-defaults wrap-defaults]]
@@ -9,9 +9,9 @@
 
 (defroutes app-routes
            (GET "/goal/macro" []
-                (let [macro-golas (controller.macro-goals/get-all-macro-goals )]
+                (let [macro-goals (controller.macro-goals/get-all-macro-goals)]
                   {:status 200
-                   :body   macro-golas}))
+                   :body   macro-goals}))
 
            (route/not-found {:status 404 :body "Route not found"}))
 
